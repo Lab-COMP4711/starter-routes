@@ -53,4 +53,4 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['lock/(:any)/(:any)'] = 'Welcome/shucks';
-$route['show/(:num)'] = 'First/gimme/$1';
+
