@@ -53,4 +53,13 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['lock/(:any)/(:any)'] = 'Welcome/shucks';
-
+$route['sleep'] = 'First/zzz';
+$route['show/(:num)'] = 'First/gimme/$1';
+$route['dunno'] = function() {
+    $source = '.\data\batman.jpg'; // an image you provide
+    // set the mime type for that image
+    header("Content-type: image/jpeg"); 
+    header('Content-Disposition: inline');
+    readfile($source); // dish it
+    die(); // and we don't have to go any further */ 
+};

@@ -25,7 +25,13 @@ class First extends Application
 
 		$this->render();
 	}
-
+        public function zzz() { 
+            $this->data['pagebody'] = 'justone';
+            $author = $this->quotes->get('1');
+                
+	    $this->data = array_merge($this->data, $author);
+            $this->render();
+        }
         public function gimme($id){
             // this is the view we want shown
 		$this->data['pagebody'] = 'justone';
